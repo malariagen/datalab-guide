@@ -1,2 +1,3 @@
-# datalab-guide
-User guide and documentation for the MalariaGEN DataLab service
+# MalariaGEN DataLab user guide
+
+This repo has user documentation for the MalariaGEN DataLab service.

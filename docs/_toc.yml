@@ -1,18 +1,11 @@
 format: jb-book
-root: landing-page
-#options:
-#  caption: Ag3 (Ag1000G phase 3)
+root: home
 parts:
-  - caption: Ag3 (Ag1000G phase 3)
+  - caption: User Guide
     chapters:
-    - file: ag3/intro
-    - file: ag3/cloud
-    - file: ag3/download
-    - file: ag3/methods
-    - file: ag3/examples
-      sections:
-      - file: ag3/examples/collection-sites
-      - file: ag3/examples/snps
-      - file: ag3/examples/snp-effects
-      - file: ag3/examples/pca
-      - file: ag3/examples/cnv-explore
+      - file: user/intro
+#      - file: user/dask
+  - caption: Developer Guide
+    chapters:
+      - file: developer/intro
+      - file: developer/docs

@@ -1,17 +1,16 @@
-title: MalariaGEN vector data user guide
+title: MalariaGEN DataLab
 author: MalariaGEN
 copyright: "2021"
 logo: images/logo.png
 execute:
   execute_notebooks: "off"
 repository:
-  url: https://github.com/malariagen/vector-data
+  url: https://github.com/malariagen/datalab-guide
   path_to_book              : docs
   branch                    : master
 launch_buttons:
   notebook_interface: "jupyterlab"
-  colab_url: "https://colab.research.google.com"
-  binderhub_url: "https://gke.mybinder.org"
+  jupyterhub_url: "https://datalab-abafar.malariagen.net/"
 html:
   use_repository_button : true
   use_issues_button: true
