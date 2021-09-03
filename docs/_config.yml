@@ -10,7 +10,9 @@ repository:
   branch                    : master
 launch_buttons:
   notebook_interface: "jupyterlab"
-  jupyterhub_url: "https://datalab-abafar.malariagen.net/"
+  binderhub_url: ""
+  colab_url: ""
+  jupyterhub_url: "https://datalab-abafar.malariagen.net"
 html:
   use_repository_button : true
   use_issues_button: true
