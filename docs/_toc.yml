@@ -4,7 +4,7 @@ parts:
   - caption: User Guide
     chapters:
       - file: user/intro
-#      - file: user/dask
+      - file: user/dask
   - caption: Developer Guide
     chapters:
       - file: developer/intro
