@@ -4,9 +4,13 @@ parts:
   - caption: User Guide
     chapters:
       - file: user/intro
-      - file: user/dask
       - file: user/conda
-      - file: user/voila
+      - file: user/dashboard
+      - file: user/examples
+        sections:
+        - file: user/examples/pca
+        - file: user/dask
+        - file: user/qc
   - caption: Developer Guide
     chapters:
       - file: developer/intro
