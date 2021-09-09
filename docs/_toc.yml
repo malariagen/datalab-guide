@@ -5,6 +5,7 @@ parts:
     chapters:
       - file: user/intro
       - file: user/dask
+      - file: user/conda
       - file: user/voila
   - caption: Developer Guide
     chapters:
