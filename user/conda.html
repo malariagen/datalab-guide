@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contributing to the documentation &#8212; MalariaGEN DataLab</title>
+    <title>Conda environments &#8212; MalariaGEN DataLab</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,7 +52,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Introduction for developers" href="intro.html" />
+    <link rel="next" title="Voila dashboards" href="voila.html" />
+    <link rel="prev" title="Dask clusters" href="dask.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -94,24 +95,24 @@
   User Guide
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../user/intro.html">
+  <a class="reference internal" href="intro.html">
    Introduction for users
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../user/dask.html">
+  <a class="reference internal" href="dask.html">
    Dask clusters
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../user/conda.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Conda environments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../user/voila.html">
+  <a class="reference internal" href="voila.html">
    Voila dashboards
   </a>
  </li>
@@ -121,14 +122,14 @@
   Developer Guide
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
+  <a class="reference internal" href="../developer/intro.html">
    Introduction for developers
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../developer/docs.html">
    Contributing to the documentation
   </a>
  </li>
@@ -173,7 +174,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/developer/docs.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/user/conda.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -193,7 +194,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/malariagen/datalab-guide/issues/new?title=Issue%20on%20page%20%2Fdeveloper/docs.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/malariagen/datalab-guide/issues/new?title=Issue%20on%20page%20%2Fuser/conda.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -214,6 +215,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shared-environments">
+   Shared environments
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#custom-environments">
+   Custom environments
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -222,15 +241,57 @@
         
               <div>
                 
-  <div class="section" id="contributing-to-the-documentation">
-<h1>Contributing to the documentation<a class="headerlink" href="#contributing-to-the-documentation" title="Permalink to this headline">¶</a></h1>
-<p>Source files for this documentation site are at <a class="reference external" href="https://github.com/malariagen/datalab-guide/">https://github.com/malariagen/datalab-guide/</a></p>
-<p>To make changes, fork this repo to your own user account, add or edit files, then make a pull request.</p>
-<p>When adding a new page, make sure to also edit the table of contents file at <code class="docutils literal notranslate"><span class="pre">docs/_toc.yml</span></code>.</p>
-<p>Each page can be either a markdown file or a Jupyter notebook.</p>
-<p>The video below illustrates how to add a new page backed by a markdown file:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9R-VNs8KWDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<p>For more information, see the <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Book docs</a>.</p>
+  <div class="section" id="conda-environments">
+<h1>Conda environments<a class="headerlink" href="#conda-environments" title="Permalink to this headline">¶</a></h1>
+<p>Conda environments provide collections of pre-installed software packages. There are two types of conda environments that can be used with MalariaGEN DataLab, described below.</p>
+<div class="section" id="shared-environments">
+<h2>Shared environments<a class="headerlink" href="#shared-environments" title="Permalink to this headline">¶</a></h2>
+<p>Shared conda environments are available to all users of MalariaGEN DataLab. Shared conda environments are also accessible from Dask workers and dashboard VMs. Shared conda environments are thus good for:</p>
+<ul class="simple">
+<li><p>When you want to be sure you are using the same collection of software packages and the same versions as someone else you are collaborating with.</p></li>
+<li><p>When you are using Dask clusters.</p></li>
+<li><p>When you want to deploy a dashboard.</p></li>
+</ul>
+<p>For example, the “binder-v3.0.0” environment is a shared conda environment that provides a set of useful data science packages.</p>
+<p>Shared environments cannot be created or modified by DataLab users. This can only be done by DataLab developers, and requires a redeployment of the service.</p>
+<p>If you would like to create a new shared environment, please start a new discussion in the <a class="reference external" href="https://github.com/orgs/malariagen/teams/datalab-users">datalab-users</a> forum, describing which software packages and versions you need.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not try to use pip install to add new packages into a shared conda environment. This will appear to install the packages, but they will be installed into a separate location in your home directory, and so will not be shared with other users or dask clusters. It can become confusing what versions of packages are available.</p>
+<p>If you need to install packages, create a custom environment, see below.</p>
+</div>
+</div>
+<div class="section" id="custom-environments">
+<h2>Custom environments<a class="headerlink" href="#custom-environments" title="Permalink to this headline">¶</a></h2>
+<p>If you need some packages that are not available in any of the pre-configured shared conda environments, you can create your own custom conda environment, which will be stored in your home directory.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Custom environments cannot be shared with other users, and you won’t be able to use the environment with dask clusters. It will only be available for running notebooks on your server.</p>
+</div>
+<p>To create a new custom environment, open a terminal, and do e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">jovyan</span><span class="o">/</span><span class="n">conda</span><span class="o">/</span><span class="n">myenv1</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.7</span> <span class="n">ipykernel</span>
+</pre></div>
+</div>
+<p>Make sure to include <code class="docutils literal notranslate"><span class="pre">ipykernel</span></code> in the environment, this will make sure the new environment appears in the launcher.</p>
+<p>You should see the new environment if you do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>
+</pre></div>
+</div>
+<p>To activate the new environment, use the full environment path, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">jovyan</span><span class="o">/</span><span class="n">conda</span><span class="o">/</span><span class="n">myenv1</span>
+</pre></div>
+</div>
+<p>Once activated, you can install any new packages with conda or pip, e.g.:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">pandas</span> <span class="n">xarray</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">malariagen_data</span>
+</pre></div>
+</div>
+<p>You can now exit the terminal. The new environment should appear in the launcher, so you can create a notebook using it.</p>
+<p>If you decide you want to get rid of the environment, make sure to shut down any running kernels, then do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">remove</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">home</span><span class="o">/</span><span class="n">jovyan</span><span class="o">/</span><span class="n">conda</span><span class="o">/</span><span class="n">myenv1</span>
+</pre></div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -246,7 +307,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./developer"
+            path: "./user"
         },
         predefinedOutput: true
     }
@@ -263,14 +324,23 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="intro.html" title="previous page">
+        <a class="left-prev" href="dask.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Introduction for developers</p>
+                <p class="prevnext-title">Dask clusters</p>
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="voila.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Voila dashboards</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
