@@ -2,6 +2,8 @@
 
 Conda environments provide collections of pre-installed software packages. There are two types of conda environments that can be used with MalariaGEN DataLab, described below.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tBOvj7GJDBc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Shared environments
 
 Shared conda environments are available to all users of MalariaGEN DataLab. Shared conda environments are also accessible from Dask workers and dashboard VMs. Shared conda environments are thus good for:
