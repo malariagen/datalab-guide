@@ -6,6 +6,8 @@ parts:
       - file: user/intro
       - file: user/dask
       - file: user/conda
+      - file: user/sharing
+      - file: user/reports
       - file: user/dashboards
   - caption: Developer Guide
     chapters:
