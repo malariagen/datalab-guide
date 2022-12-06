@@ -1,15 +1,24 @@
 format: jb-book
 root: home
 parts:
-  - caption: User Guide
+
+  - caption: Bespin
     chapters:
-      - file: user/intro
-      - file: user/dask
-      - file: user/conda
-      - file: user/sharing
-      - file: user/reports
-      - file: user/dashboards
-  - caption: Developer Guide
+      - file: bespin/user
+        sections:
+          - file: bespin/user/login
+
+  - caption: Abafar
     chapters:
-      - file: developer/intro
-      - file: developer/docs
+      - file: abafar/user
+        sections:
+          - file: abafar/user/intro
+          - file: abafar/user/dask
+          - file: abafar/user/conda
+          - file: abafar/user/sharing
+          - file: abafar/user/reports
+          - file: abafar/user/dashboards
+      - file: abafar/developer
+        sections:
+          - file: abafar/developer/intro
+          - file: abafar/developer/docs
